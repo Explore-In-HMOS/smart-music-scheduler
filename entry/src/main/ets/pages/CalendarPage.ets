@@ -1,6 +1,6 @@
-import router from '@ohos.router';
 import { ScheduleStore } from '../services/ScheduleStore';
 import prompt from '@ohos.prompt';
+
 
 @Entry
 @Component
@@ -32,7 +32,7 @@ struct CalendarPage {
         .width(28)
         .height(28)
         .fillColor(Color.White)
-        .onClick(() => router.back())
+        .onClick(() =>   this.getUIContext().getRouter().back())
         .alignSelf(ItemAlign.Center)
 
       Text('Pick a date')
@@ -67,7 +67,7 @@ struct CalendarPage {
 
           prompt.showToast({ message: 'Date selected' });
 
-          router.replaceUrl({
+          this.getUIContext().getRouter().replaceUrl({
             url: 'pages/Index',
             params: { selectedDate: iso }
           });

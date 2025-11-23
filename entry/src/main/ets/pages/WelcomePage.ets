@@ -1,4 +1,3 @@
-import router from '@ohos.router';
 @Entry
 @Component
 struct Index {
@@ -6,7 +5,7 @@ struct Index {
 
 
   aboutToAppear(): void {
-    const params = router.getParams() as Record<string, string>;
+    const params =   this.getUIContext().getRouter().getParams() as Record<string, string>;
     this.picked = params?.selectedDate ?? '';
   }
 
@@ -30,21 +29,21 @@ struct Index {
         .height(30)
         .borderRadius(25)
         .fontSize(10)
-        .onClick(() => router.pushUrl({ url: 'pages/CalendarPage' }))
+        .onClick(() => this.getUIContext().getRouter().pushUrl({ url: 'pages/CalendarPage' }))
 
       Button('Schedule Playback')
         .width(120)
         .height(30)
         .borderRadius(25)
         .fontSize(10)
-        .onClick(() => router.pushUrl({ url: 'pages/SchedulePage', params: { preselectedDate: this.picked } }))
+        .onClick(() => this.getUIContext().getRouter().pushUrl({ url: 'pages/SchedulePage', params: { preselectedDate: this.picked } }))
 
       Button('Open Player')
         .width(120)
         .height(30)
         .borderRadius(25)
         .fontSize(10)
-        .onClick(() => router.pushUrl({ url: 'pages/PlayerPage' }))
+        .onClick(() => this.getUIContext().getRouter().pushUrl({ url: 'pages/PlayerPage' }))
     }
     .height('100%')
     .width('100%')

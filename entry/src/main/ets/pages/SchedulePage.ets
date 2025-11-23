@@ -1,4 +1,3 @@
-import router from '@ohos.router';
 import { ScheduleStore } from '../services/ScheduleStore';
 import { prompt } from '@kit.ArkUI';
 
@@ -10,7 +9,7 @@ struct SchedulePage {
   @State status: string = '';
 
   aboutToAppear(): void {
-    const params = router.getParams() as Record<string, string>;
+    const params = this.getUIContext().getRouter().getParams() as Record<string, string>;
     this.dateStr = params?.preselectedDate || ScheduleStore.getSelectedDate() || '';
     this.songName = ScheduleStore.getPendingSongTitle() || '';
   }
@@ -47,7 +46,7 @@ struct SchedulePage {
         .width(28)
         .height(28)
         .fillColor(Color.White)
-        .onClick(() => router.back())
+        .onClick(() => this.getUIContext().getRouter().back())
         .alignSelf(ItemAlign.Center)
       Text('Schedule Playback')
         .fontSize(15)

@@ -1,4 +1,3 @@
-import router from '@ohos.router';
 import { ScheduleStore } from '../services/ScheduleStore';
 
 
@@ -58,7 +57,7 @@ struct PlayerPage {
         .width(28)
         .height(28)
         .fillColor(Color.White)
-        .onClick(() => router.back())
+        .onClick(() => this.getUIContext().getRouter().back())
         .alignSelf(ItemAlign.Center)
 
       Text('Player')

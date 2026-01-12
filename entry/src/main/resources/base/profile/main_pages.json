@@ -1,8 +1,5 @@
 {
   "src": [
-    "pages/WelcomePage",
-    "pages/CalendarPage",
-    "pages/SchedulePage",
-    "pages/PlayerPage"
+    "pages/WelcomePage"
   ]
 }

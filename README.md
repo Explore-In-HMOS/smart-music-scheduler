@@ -5,12 +5,11 @@
 This HarmonyOS app lets users schedule a song to play automatically at a specific date and time. You pick a date/time, choose a track, and save. When the moment arrives, a background trigger starts playback and can optionally show a notification with Play / Stop / Snooze actions. The goal is a hands-free experience for reminders, routines, and moments you don’t want to miss.
 
 # Preview
-
 <div>
-    <img src="screenshots/sm1.png" width="24%" />
-    <img src="screenshots/sm2.png" width="24%" />
-    <img src="screenshots/sm3.png" width="24%" />
-    <img src="screenshots/sm4.png" width="24%" />
+<img src="screenshots/sm1.png" width="24%" />
+<img src="screenshots/sm2.png" width="24%" />
+<img src="screenshots/sm3.png" width="24%" />
+<img src="screenshots/sm4.png" width="24%" />
 </div>
 
 # Use Cases
@@ -69,6 +68,6 @@ SmartMusicSchedulerApp/
 ## Supported Device
 - Huawei Watch 5
 
-## Licence
-**SmartMusicScheduler** is distributed under the terms of the **MIT License**.  
-See the [LICENCE](/LICENCE) file for more information.
+# License
+**SmartMusicScheduler** is distributed under the terms of the **MIT License**.
+See the [LICENSE](/LICENSE) for more information.

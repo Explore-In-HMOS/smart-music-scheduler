@@ -3,7 +3,7 @@ export interface MusicSchedule {
   songTitle: string;
 }
 
-class _ScheduleStore {
+class ScheduleStore {
   private _selectedDateISO: string = '';
   private _pendingSongTitle: string = '';
   private _latestSchedule: MusicSchedule | null = null;
@@ -19,7 +19,9 @@ class _ScheduleStore {
   getPendingSongTitle(): string { return this._pendingSongTitle; }
 
   commitSchedule(): MusicSchedule | null {
-    if (!this._selectedDateISO || !this._pendingSongTitle) return null;
+    if (!this._selectedDateISO || !this._pendingSongTitle) {
+      return null
+    };
     this._latestSchedule = {
       dateISO: this._selectedDateISO,
       songTitle: this._pendingSongTitle
@@ -32,4 +34,4 @@ class _ScheduleStore {
   }
 }
 
-export const ScheduleStore = new _ScheduleStore();
+export const scheduleStore = new ScheduleStore();
